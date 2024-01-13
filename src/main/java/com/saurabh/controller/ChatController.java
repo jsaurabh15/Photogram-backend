@@ -50,7 +50,7 @@ public class ChatController {
        }
     }
 
-    @GetMapping("/user/{userId}")
+    @GetMapping("/user")
     public ResponseEntity<?> findChatOfUser(@RequestHeader("Authorization") String jwt) {
         try {
             User user = userService.findUserFromAuthToken(jwt);
